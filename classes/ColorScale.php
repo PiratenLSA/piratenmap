@@ -29,24 +29,34 @@ class ColorScale {
 		$lower = null;
 		$higher = null;
 		for ($i=0; $i<count($ke); $i++) {
-			if ($ke[$i]>$p) {
+			if (is_null($higher) && ($ke[$i]>$p)) {
+				// the first one that is larger
 				$higher = $ke[$i];
-				$lower = $ke[$i-1];
-				break;
+			}
+			if ($ke[$i]<=$p) {
+				//the last one that was smaller/equal
+				$lower = $ke[$i];
 			}
 		}
-		if (is_null($higher)) {
-			$higher = $ke[count($ke)-1];
-			$lower = $ke[count($ke)-2];
+		if (!is_null($higher) && !is_null($lower)) {
+			//both found, interpolate
+			$pp = ($p-$lower)/($higher-$lower);
+			// split channels
+			$ch = unpack('C*',pack('N',$this->table[$higher]));
+			$cl = unpack('C*',pack('N',$this->table[$lower]));
+			return self::bgr(
+				$cl[2] + ($ch[2]-$cl[2])*$pp,
+				$cl[3] + ($ch[3]-$cl[3])*$pp,
+				$cl[4] + ($ch[4]-$cl[4])*$pp);
+		} else if (is_null($lower) && !is_null($higher)) {
+			//nothing below
+			return $this->table[$higher];
+		} else if (is_null($higher) && !is_null($lower)) {
+			//nothing above
+			return $this->table[$lower];
 		}
-		$pp = ($p-$lower)/($higher-$lower);
-		// split channels
-		$ch = unpack('C*',pack('N',$this->table[$higher]));
-		$cl = unpack('C*',pack('N',$this->table[$lower]));
-		return self::bgr(
-			$cl[2] + ($ch[2]-$cl[2])*$pp,
-			$cl[3] + ($ch[3]-$cl[3])*$pp,
-			$cl[4] + ($ch[4]-$cl[4])*$pp);
+		// whoops, we have 0 points
+		return self::bgr(0,0,0);
 	}
 
 	public function toXML($linearGradient) {
