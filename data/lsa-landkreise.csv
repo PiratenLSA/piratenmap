@@ -1,15 +1,15 @@
-;Kennzeichen;Kreis;EW;Fläche
-ABI;Anhalt-Bitterfeld;176642;1452.71
-BLK;Burgenlandkreis;194195;1413.36
-BK;Börde;178880;2366.19
-HZ;Harz;232343;2104.00
-JL;Jerichower Land;96251;1576.66
-MSH;Mansfeld-Südharz;150295;1448.60
-SK;Saalekreis;196946;1433.22
-SLK;Salzlandkreis;209579;1425.86
-SAW;Altmarkkreis Salzwedel;89512;2292.52
-SDL;Stendal;121899;2422.96
-WB;Wittenberg;137070;1929.89
-DE;Dessau-Roßlau;86906;244.62
-HAL;Halle;232963;135.02
-MD;Magdeburg;231525;200.95
+;Kennzeichen;Kreis;EW;Fläche;Stand 25.02.2013
+ABI;Anhalt-Bitterfeld;172338;1452.71;;
+BLK;Burgenlandkreis;189762;1413.36;;
+BK;Börde;176311;2366.19;;
+HZ;Harz;227530;2104.00;;
+JL;Jerichower Land;94468;1576.66;;
+MSH;Mansfeld-Südharz;146415;1448.60;;
+SK;Saalekreis;193867;1433.22;;
+SLK;Salzlandkreis;204674;1425.86;;
+SAW;Altmarkkreis Salzwedel;87791;2292.52;;
+SDL;Stendal;118782;2422.96;;
+WB;Wittenberg;134240;1929.89;;
+DE;Dessau-Roßlau;85025;244.62;;
+HAL;Halle;234528;135.02;;
+MD;Magdeburg;233281;200.95;;

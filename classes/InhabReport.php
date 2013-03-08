@@ -23,7 +23,7 @@ class InhabReport extends Report {
 		$map->applyColor($area, $cs);
 		$map->applyCount($count);
 		$map->setDate('Datum: '.date('Y-m-d'));
-		$map->setChangeSince('(Stand 31.12.2010)');
+		$map->setChangeSince('(Stand 25.02.2013)');
 		$map->setExternal('');
 		$map->setTitle(array('Einwohnerzahl', 'nach', 'Landkreisen'));
 		$map->setLegend('Einwohner / km²');
