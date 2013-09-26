@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<Folder>
+		<name>LSA</name>
+		<open>0</open>
+<?php foreach ($polys as $poly) :?>
+  <Placemark>
+    <name><?php echo $poly['id'] ?></name>
+    <Polygon>
+	  <tessellate>1</tessellate>
+      <outerBoundaryIs>
+		<?php foreach ($poly['loops'] as $loop) :?>
+        <LinearRing>
+          <coordinates><?php echo $loop ?>
+          </coordinates>
+        </LinearRing>
+		<?php endforeach; ?>
+      </outerBoundaryIs>
+    </Polygon>
+  </Placemark>
+<?php endforeach; ?>
+</Folder>
+</Document>
+</kml>

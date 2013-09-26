@@ -195,12 +195,24 @@ class OSMXML{
 
 	public function writeCSV($target, $setdelim=';', $pointdelim=';')
 	{
-		//FIXME
 		echo " Writing CSV...\n";
 		if ($file = fopen($target, "w")) {
+			fputs($file,
+				'Gemeindeschluessel' . ';'.
+				'LoopNr' . ';'.
+				'Koordinaten...'.
+				"\n"
+				);
 			foreach ($this->gemeinden as $gs => $ge){
-				$line = "$gs;" . $this->formatPointsList($ge, $setdelim, $pointdelim) . "\r\n";
-				fputs($file, $line);
+				$lc = 1;
+				foreach($ge as $lo) {
+					fputs($file,
+						$gs . ';'.
+						$lc++ . ';'.
+						$this->formatPointsList($lo, ';', ',').
+						"\n"
+						);
+				}
 			}
 			fclose($file);
 		}
@@ -230,6 +242,30 @@ class OSMXML{
 		ob_end_clean();
 		file_put_contents($target, $svg);
 	}
+
+
+	public function writeKML($target)
+	{
+		echo " Writing KML from template...\n";
+		$polys = array();
+		foreach ($this->gemeinden as $gs => $ge){
+			$loops = array();
+			foreach($ge as $lo) {
+				$lo = array_map('array_reverse', $lo);
+				$loops[] = $this->formatPointsList($lo, ' ', ',');
+			}
+
+			$polys[] = array(
+				'id' => $gs,
+				'loops' => $loops
+			);
+		}
+		ob_start();
+		include "basetest.kml";
+		$svg = ob_get_contents();
+		ob_end_clean();
+		file_put_contents($target, $svg);
+	}
 }
 
 function point_distance($p1, $p2) {
@@ -248,6 +284,7 @@ function LLtoUTM($ll) {
 
 $osm = new OSMXML($argv[1]);
 $osm->processRelations();
-//$osm->writeCSV($argv[1].'.csv');
-$osm->writeSVG($argv[1].'.svg');
+#$osm->writeCSV($argv[1].'.csv');
+#$osm->writeSVG($argv[1].'.svg');
+$osm->writeKML($argv[1].'.kml');
 ?>
