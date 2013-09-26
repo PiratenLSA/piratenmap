@@ -20,7 +20,11 @@ abstract class Report {
 	}
 #endregion
 
-	abstract static function DisplayName();
+	static function DisplayName() {
+		// so apparently, abstract static function causes an E_STRICT now.
+		// glad they don't randomly change warnings around.
+		throw new BadFunctionCallException('Abstract Error');
+	}
 	abstract function getConfigHTML();
 	abstract function produceSVG($params);
 }
