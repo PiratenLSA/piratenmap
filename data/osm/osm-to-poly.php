@@ -1,5 +1,7 @@
 <?php
 
+include 'gPoint.php';
+
 define('MERGE_LIMIT'   , 0.00001);
 define('SIMPLIFY_LIMIT', 0.01);
 class OSMXML{
@@ -60,50 +62,53 @@ class OSMXML{
 		if (!count($parts)) {
 			return array();
 		}
-		$arr = array_shift($parts);
-		while(count($parts)) {
-			//find the part that continues here
-			$last = $arr[count($arr)-1];
-			$merge_idx = -1;
-			$merge_reverse = false;
-			$merge_distance = 1E9;
-			for ($i=0; $i<count($parts); $i++) {
-				$pt = $parts[$i];
-				if (($d=point_distance($last, $pt[0])) < $merge_distance) {
-					$merge_idx = $i;
-					$merge_reverse = false;
-					$merge_distance = $d;
-				}
-				if (($d=point_distance($last, $pt[count($pt)-1])) < $merge_distance) {
-					$merge_idx = $i;
-					$merge_reverse = true;
-					$merge_distance = $d;
-				}
-			}
-			if ($merge_idx >= 0) {
-				if ($merge_distance > MERGE_LIMIT) {
-					echo " doubtful continuation found, area may not be convex simple\n";
-				}
-				$newparts = array();
+		$areas = array();
+		while(count($parts)){
+			$arr = array_shift($parts);
+			while(count($parts)) {
+				//find the part that continues here
+				$last = $arr[count($arr)-1];
+				$merge_idx = -1;
+				$merge_reverse = false;
+				$merge_distance = 1E9;
 				for ($i=0; $i<count($parts); $i++) {
-					if ($i==$merge_idx) {
-						$merge = $parts[$i];
-					} else {
-						$newparts[] = $parts[$i];
+					$pt = $parts[$i];
+					//at beginning
+					if (($d=point_distance($last, $pt[0])) < $merge_distance) {
+						$merge_idx = $i;
+						$merge_reverse = false;
+						$merge_distance = $d;
+					}
+					//at end
+					if (($d=point_distance($last, $pt[count($pt)-1])) < $merge_distance) {
+						$merge_idx = $i;
+						$merge_reverse = true;
+						$merge_distance = $d;
 					}
 				}
-				$parts = $newparts;
-				if ($merge_reverse) {
-					$merge = array_reverse($merge);
+				if ($merge_idx >= 0 && $merge_distance < MERGE_LIMIT) {
+					$newparts = array();
+					for ($i=0; $i<count($parts); $i++) {
+						if ($i==$merge_idx) {
+							$merge = $parts[$i];
+						} else {
+							$newparts[] = $parts[$i];
+						}
+					}
+					$parts = $newparts;
+					if ($merge_reverse) {
+						$merge = array_reverse($merge);
+					}
+					$arr = array_merge($arr, $merge);
+				} else {
+					// nothing matching, start new area
+					break;
 				}
-				$arr = array_merge($arr, $merge);
-			} else {
-				echo " no continuation found after merging ".($begin_parts-count($parts))." of ".$begin_parts." parts\n";
-				break;
 			}
+			$areas[] = $arr;
 		}
-		echo " Created ".count($arr)." points. \n";
-		return $arr;
+		echo " Created ".count($areas)." areas. \n";
+		return $areas;
 	}
 
 	public function simplifyMesh($points)
@@ -190,6 +195,7 @@ class OSMXML{
 
 	public function writeCSV($target, $setdelim=';', $pointdelim=';')
 	{
+		//FIXME
 		echo " Writing CSV...\n";
 		if ($file = fopen($target, "w")) {
 			foreach ($this->gemeinden as $gs => $ge){
@@ -205,9 +211,17 @@ class OSMXML{
 		echo " Writing SVG from template...\n";
 		$polys = array();
 		foreach ($this->gemeinden as $gs => $ge){
+			$loops = array();
+			foreach($ge as $lo) {
+				$lo = array_map(function($p) {
+					return array_reverse(LLtoUTM($p));
+				}, $lo);
+				$loops[] = $this->formatPointsList($lo, ' ', ',');
+			}
+
 			$polys[] = array(
 				'id' => $gs,
-				'points' =>$this->formatPointsList($ge, ' ', ',')
+				'loops' => $loops
 			);
 		}
 		ob_start();
@@ -223,6 +237,13 @@ function point_distance($p1, $p2) {
 	$dx = ($p1[0]-$p2[0]);
 	$dy = ($p1[1]-$p2[1]);
 	return sqrt($dx*$dx + $dy*$dy);
+}
+
+function LLtoUTM($ll) {
+	$gp = new gPoint();
+	$gp->setLongLat($ll[1], $ll[0]);
+	$gp->convertLLtoTM(12.0);
+	return array(-$gp->N()/1000.0, $gp->E()/1000.0);
 }
 
 $osm = new OSMXML($argv[1]);

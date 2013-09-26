@@ -11,6 +11,10 @@
 	</rdf:RDF>
 </metadata>
 <?php foreach ($polys as $poly) :?>
-<polygon points="<?php echo $poly['points'] ?>" id="<?php echo $poly['id'] ?>" />
+  <g id="<?php echo $poly['id'] ?>">
+	<?php foreach ($poly['loops'] as $loop) :?>
+    <polygon points="<?php echo $loop ?>" />
+	<?php endforeach; ?>
+  </g>
 <?php endforeach; ?>
 </svg>

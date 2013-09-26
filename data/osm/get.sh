@@ -25,5 +25,5 @@ function convert_poly {
 }
 
 PATH=.:$PATH
-curl_gemeinden
+#curl_gemeinden
 convert_poly
