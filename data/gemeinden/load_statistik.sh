@@ -13,5 +13,13 @@ function loadweb {
   done
 }
 
+function loadgifs {
+  for nr in {66..74}
+  do
+    wget -nv -O wk$(echo $nr).gif http://www.statistik.sachsen-anhalt.de/gk/navigation/bw/gem/_w0$(echo $nr)k.gif
+  done
+}
 
-loadweb
+
+#loadgifs
+#loadweb
