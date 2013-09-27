@@ -2,19 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors',1);
 
-define('APPLICATION_DIR',dirname(__FILE__).DIRECTORY_SEPARATOR);
-define('CLASS_LOADER_DIR',APPLICATION_DIR.'classes'.DIRECTORY_SEPARATOR);
-define('DATA_DIR',APPLICATION_DIR.'data'.DIRECTORY_SEPARATOR);
-
-
-#region Class Loader Foo
-
-function __autoload($classname) {
-	if (is_readable(CLASS_LOADER_DIR.$classname.'.php')) {
-		require_once CLASS_LOADER_DIR.$classname.'.php';
-	} else
-		die('Classfile not found: '.$classname.'.php');
-}
+require_once dirname(__FILE__).DIRECTORY_SEPARATOR.'autoloader.php';
 
 function load_classes() {
 	/* This loads all classes defined in the CLASS_LOADER_DIR.
@@ -39,7 +27,5 @@ function load_classes() {
 }
 
 load_classes();
-
-#endregion
 
 ?>

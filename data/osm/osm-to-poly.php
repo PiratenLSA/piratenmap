@@ -1,11 +1,12 @@
 <?php
 
-include 'gPoint.php';
+require_once dirname(__FILE__).DIRECTORY_SEPARATOR.'../../autoloader.php';
 
 define('MERGE_LIMIT'   , 0.00001);
 define('SIMPLIFY_LIMIT', 0.01);
 class OSMXML{
 	private $xml = null;
+	private $gemeindenamen = array();
 	private $gemeinden = array();
 	private $cacheNodes = array();
 	private $cacheWays = array();
@@ -15,6 +16,7 @@ class OSMXML{
 		echo "Loading XML $file...\n";
 		$this->xml = simplexml_load_file($file);
 		$this->prefetch();
+		$this->loadStatics();
 	}
 
 	function tag_value($key,$tagname){
@@ -131,7 +133,6 @@ class OSMXML{
 		return $arr;
 	}
 
-
 	private function prefetch()
 	{
 		// Cache Nodes for faster lookup
@@ -185,6 +186,14 @@ class OSMXML{
 		echo " Simplified to ".$tnodes." nodes.\n";
 	}
 
+	private function loadStatics()
+	{
+		// load names from common CSV
+		echo "Loading static info...\n";
+		$gemeinden = CSVHelper::Load(DATA_DIR.'lsa-gemeinden.csv', array('delim' => ';', 'empty_is_comment' => true));
+		$this->gemeindenamen = CSVHelper::CreateFlatMap($gemeinden, 0, 1);
+	}
+
 	public function formatPointsList($ge, $setdelim=';', $pointdelim=';')
 	{
 		// flexible joining of point lists
@@ -199,6 +208,7 @@ class OSMXML{
 		if ($file = fopen($target, "w")) {
 			fputs($file,
 				'Gemeindeschluessel' . ';'.
+				'Name' . ';'.
 				'LoopNr' . ';'.
 				'Koordinaten...'.
 				"\n"
@@ -208,6 +218,7 @@ class OSMXML{
 				foreach($ge as $lo) {
 					fputs($file,
 						$gs . ';'.
+						$this->gemeindenamen[$gs] . ';'.
 						$lc++ . ';'.
 						$this->formatPointsList($lo, ';', ',').
 						"\n"
@@ -233,6 +244,7 @@ class OSMXML{
 
 			$polys[] = array(
 				'id' => $gs,
+				'name' => $this->gemeindenamen[$gs],
 				'loops' => $loops
 			);
 		}
@@ -257,6 +269,7 @@ class OSMXML{
 
 			$polys[] = array(
 				'id' => $gs,
+				'name' => $this->gemeindenamen[$gs],
 				'loops' => $loops
 			);
 		}
@@ -285,6 +298,6 @@ function LLtoUTM($ll) {
 $osm = new OSMXML($argv[1]);
 $osm->processRelations();
 #$osm->writeCSV($argv[1].'.csv');
-#$osm->writeSVG($argv[1].'.svg');
+$osm->writeSVG($argv[1].'.svg');
 $osm->writeKML($argv[1].'.kml');
 ?>

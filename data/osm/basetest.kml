@@ -6,7 +6,7 @@
 	<open>0</open>
 <?php foreach ($polys as $poly) :?>
 	<Placemark id="<?php echo $poly['id'] ?>">
-		<name><?php echo $poly['id'] ?></name>
+		<name><?php echo $poly['name'] ?></name>
 		<MultiGeometry>
 		<?php foreach ($poly['loops'] as $loop) :?>
 			<Polygon>
