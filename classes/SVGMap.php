@@ -1,19 +1,21 @@
 <?php
 
 class SVGMap {
-	private $prefix;
-	private $xml;
+	protected $prefix;
+	protected $areaContainer;
+	protected $xml;
 
 	static function xLower($d) {
 		return "translate($d,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')";
 	}
 
-	function __construct($svgfile, $prefix) {
+	function __construct($svgfile, $prefix, $areaContainer) {
 		$this->xml = simplexml_load_file($svgfile);
 		$namespaces = $this->xml->getDocNamespaces();
 		$this->xml->registerXPathNamespace('svg', $namespaces['']);
 
 		$this->prefix = $prefix;
+		$this->areaContainer = $areaContainer;
 	}
 
 	public function svgContent() {
@@ -46,7 +48,7 @@ class SVGMap {
 		$miv = min(array_values($data));
 		foreach ($data as $kreis => $val){
 			$id = strtolower($this->prefix.$kreis);
-			$area = $this->xml->xpath("//svg:g[@id='Kreise']/svg:g[".self::xLower('@id')."='$id']");
+			$area = $this->xml->xpath("//svg:g[@id='".$this->areaContainer."']/svg:g[".self::xLower('@id')."='$id']");
 			if(count($area)) {
 				$area = $area[0];
 

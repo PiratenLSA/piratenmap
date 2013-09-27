@@ -6,11 +6,17 @@ class CSVHelper extends UtilityClass {
 			'delim' => ',',
 			'quote' => '"',
 			'escape' => '\\',
-			'empty_is_comment' => false
+			'empty_is_comment' => false,
+			'skip_first_rows' => 0
 		), $options);
 		if (($handle = fopen($filename, "r")) !== FALSE) {
 			$result = array();
+			$skip = (int)$options['skip_first_rows'];
 			while (($data = fgetcsv($handle, 1000, $options['delim'], $options['quote'], $options['escape'])) !== FALSE) {
+				if ($skip > 0) {
+					$skip--;
+					continue;
+				}
 				if (!$options['empty_is_comment'] || !empty($data[0])) {
 					$result[] = $data;
 				}

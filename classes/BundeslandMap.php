@@ -2,7 +2,7 @@
 
 class BundeslandMap extends SVGMap {
 	function __construct($svgfile, $land) {
-		parent::__construct($svgfile, $land.'-');
+		parent::__construct($svgfile, $land.'-', 'Kreise');
 	}
 
 	public function setTitle($lines) {
