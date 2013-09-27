@@ -1,224 +1,224 @@
-;Schlüsselnummer;Name
-15001000;Stadt Dessau-Roßlau;
-15002000;Stadt Halle (Saale);
-15003000;Landeshauptstadt Magdeburg;
-15081026;Gemeinde Flecken Apenburg-Winterfeld;
-15081030;Stadt Arendsee (Altmark);
-15081045;Gemeinde Beetzendorf;
-15081095;Gemeinde Dähre;
-15081105;Gemeinde Flecken Diesdorf;
-15081135;Hansestadt Gardelegen;
-15081225;Gemeinde Jübar;
-15081240;Stadt Kalbe (Milde);
-15081280;Stadt Klötze;
-15081290;Gemeinde Kuhfelde;
-15081440;Gemeinde Rohrberg;
-15081455;Hansestadt Salzwedel;
-15081545;Gemeinde Wallstawe;
-15082005;Stadt Aken (Elbe);
-15082015;Stadt Bitterfeld-Wolfen;
-15082180;Stadt Köthen (Anhalt);
-15082241;Gemeinde Muldestausee;
-15082256;Gemeinde Osternienburger Land;
-15082301;Stadt Raguhn-Jeßnitz;
-15082340;Stadt Sandersdorf-Brehna;
-15082377;Stadt Südliches Anhalt;
-15082430;Stadt Zerbst/Anhalt;
-15082440;Stadt Zörbig;
-15083020;Gemeinde Altenhausen;
-15083025;Gemeinde Am Großen Bruch;
-15083030;Gemeinde Angern;
-15083035;Gemeinde Ausleben;
-15083040;Gemeinde Barleben;
-15083060;Gemeinde Beendorf;
-15083115;Gemeinde Bülstringen;
-15083120;Gemeinde Burgstall;
-15083125;Gemeinde Calvörde;
-15083130;Gemeinde Colbitz;
-15083190;Gemeinde Eilsleben;
-15083205;Gemeinde Erxleben;
-15083230;Gemeinde Flechtingen;
-15083245;Stadt Gröningen;
-15083270;Stadt Haldensleben;
-15083275;Gemeinde Harbke;
-15083298;Gemeinde Hohe Börde;
-15083320;Gemeinde Hötensleben;
-15083323;Gemeinde Ingersleben;
-15083355;Stadt Kroppenstedt;
-15083361;Gemeinde Loitsche-Heinrichsberg;
-15083390;Gemeinde Niedere Börde;
-15083411;Stadt Oebisfelde-Weferlingen;
-15083415;Stadt Oschersleben (Bode);
-15083440;Gemeinde Rogätz;
-15083485;Gemeinde Sommersdorf;
-15083490;Gemeinde Sülzetal;
-15083495;Gemeinde Süplingen;
-15083505;Gemeinde Ummendorf;
-15083515;Gemeinde Völpke;
-15083531;Stadt Wanzleben-Börde;
-15083535;Gemeinde Wefensleben;
-15083557;Gemeinde Westheide;
-15083565;Stadt Wolmirstedt;
-15083580;Gemeinde Zielitz;
-15084012;Gemeinde An der Poststraße;
-15084013;Gemeinde Meineweh;
-15084015;Stadt Bad Bibra;
-15084025;Gemeinde Balgstädt;
-15084115;Gemeinde Droyßig;
-15084125;Stadt Eckartsberga;
-15084130;Gemeinde Elsteraue;
-15084132;Gemeinde Finne;
-15084133;Gemeinde Finneland;
-15084135;Stadt Freyburg (Unstrut);
-15084150;Gemeinde Gleina;
-15084170;Gemeinde Goseck;
-15084207;Gemeinde Gutenborn;
-15084235;Stadt Hohenmölsen;
-15084246;Gemeinde Kaiserpfalz;
-15084250;Gemeinde Karsdorf;
-15084275;Gemeinde Kretzschau;
-15084282;Gemeinde Lanitz-Hassel-Tal;
-15084285;Stadt Laucha an der Unstrut;
-15084315;Stadt Lützen;
-15084335;Gemeinde Mertendorf;
-15084341;Gemeinde Molauer Land;
-15084355;Stadt Naumburg (Saale);
-15084360;Stadt Nebra (Unstrut);
-15084375;Stadt Osterfeld;
-15084442;Gemeinde Schnaudertal;
-15084445;Gemeinde Schönburg;
-15084470;Stadt Stößen;
-15084490;Stadt Teuchern;
-15084550;Stadt Weißenfels;
-15084560;Gemeinde Wethau;
-15084565;Gemeinde Wetterzeube;
-15084590;Stadt Zeitz;
-15085035;Gemeinde Bad Suderode;
-15085040;Stadt Ballenstedt;
-15085055;Stadt Blankenburg (Harz);
-15085090;Gemeinde Ditfurt;
-15085110;Stadt Falkenstein/Harz;
-15085120;Stadt Gernrode;
-15085125;Gemeinde Groß Quenstedt;
-15085135;Stadt Halberstadt;
-15085140;Gemeinde Harsleben;
-15085145;Stadt Harzgerode;
-15085160;Gemeinde Hedersleben;
-15085185;Gemeinde Huy;
-15085190;Stadt Ilsenburg (Harz);
-15085227;Gemeinde Nordharz;
-15085228;Stadt Oberharz am Brocken;
-15085230;Stadt Osterwieck;
-15085235;Stadt Quedlinburg;
-15085255;Gemeinde Rieder;
-15085285;Stadt Schwanebeck;
-15085287;Gemeinde Selke-Aue;
-15085330;Stadt Thale;
-15085365;Stadt Wegeleben;
-15085370;Stadt Wernigerode;
-15086005;Gemeinde Biederitz;
-15086015;Stadt Burg;
-15086035;Gemeinde Elbe-Parey;
-15086040;Stadt Genthin;
-15086055;Stadt Gommern;
-15086080;Stadt Jerichow;
-15086140;Stadt Möckern;
-15086145;Gemeinde Möser;
-15087010;Gemeinde Ahlsdorf;
-15087015;Stadt Allstedt;
-15087031;Stadt Arnstein;
-15087045;Gemeinde Benndorf;
-15087055;Gemeinde Berga;
-15087070;Gemeinde Blankenheim;
-15087075;Gemeinde Bornstedt;
-15087101;Gemeinde Brücken-Hackpfüffel;
-15087125;Gemeinde Edersleben;
-15087130;Lutherstadt Eisleben;
-15087165;Stadt Gerbstedt;
-15087205;Gemeinde Helbra;
-15087210;Gemeinde Hergisdorf;
-15087220;Stadt Hettstedt;
-15087250;Stadt Kelbra (Kyffhäuser);
-15087260;Gemeinde Klostermansfeld;
-15087275;Stadt Mansfeld;
-15087370;Stadt Sangerhausen;
-15087386;Gemeinde Seegebiet Mansfelder Land;
-15087412;Gemeinde Südharz;
-15087440;Gemeinde Wallhausen;
-15087470;Gemeinde Wimmelburg;
-15088020;Stadt Bad Dürrenberg;
-15088025;Goethestadt Bad Lauchstädt;
-15088030;Gemeinde Barnstädt;
-15088065;Stadt Braunsbedra;
-15088100;Gemeinde Farnstädt;
-15088150;Gemeinde Kabelsketal;
-15088195;Stadt Landsberg;
-15088205;Stadt Leuna;
-15088216;Stadt Wettin-Löbejün;
-15088220;Stadt Merseburg;
-15088235;Stadt Mücheln (Geiseltal);
-15088250;Gemeinde Nemsdorf-Göhrendorf;
-15088265;Gemeinde Obhausen;
-15088295;Gemeinde Petersberg;
-15088305;Stadt Querfurt;
-15088319;Gemeinde Salzatal;
-15088330;Gemeinde Schkopau;
-15088340;Stadt Schraplau;
-15088355;Gemeinde Steigra;
-15088365;Gemeinde Teutschenthal;
-15089005;Stadt Alsleben (Saale);
-15089015;Stadt Aschersleben;
-15089026;Stadt Barby;
-15089030;Stadt Bernburg (Saale);
-15089041;Gemeinde Bördeaue;
-15089042;Gemeinde Bördeland;
-15089043;Gemeinde Börde-Hakel;
-15089045;Gemeinde Borne;
-15089055;Stadt Calbe (Saale);
-15089075;Stadt Egeln;
-15089130;Gemeinde Giersleben;
-15089165;Stadt Güsten;
-15089175;Stadt Hecklingen;
-15089185;Gemeinde Ilberstedt;
-15089195;Stadt Könnern;
-15089235;Stadt Nienburg (Saale);
-15089245;Gemeinde Plötzkau;
-15089305;Stadt Schönebeck (Elbe);
-15089307;Stadt Seeland;
-15089310;Stadt Staßfurt;
-15089365;Gemeinde Wolmirsleben;
-15090003;Gemeinde Aland;
-15090007;Gemeinde Altmärkische Höhe;
-15090008;Gemeinde Altmärkische Wische;
-15090010;Stadt Arneburg;
-15090070;Stadt Bismark (Altmark);
-15090135;Gemeinde Eichstedt (Altmark);
-15090180;Gemeinde Goldbeck;
-15090220;Gemeinde Hassel;
-15090225;Hansestadt Havelberg;
-15090245;Gemeinde Hohenberg-Krusemark;
-15090270;Gemeinde Iden;
-15090285;Gemeinde Kamern;
-15090310;Gemeinde Klietz;
-15090415;Hansestadt Osterburg (Altmark);
-15090435;Gemeinde Rochau;
-15090445;Stadt Sandau (Elbe);
-15090485;Gemeinde Schollene;
-15090500;Gemeinde Schönhausen (Elbe);
-15090520;Hansestadt Seehausen (Altmark);
-15090535;Hansestadt Stendal;
-15090546;Stadt Tangerhütte;
-15090550;Stadt Tangermünde;
-15090610;Hansestadt Werben (Elbe);
-15090631;Gemeinde Wust-Fischbeck;
-15090635;Gemeinde Zehrental;
-15091010;Stadt Annaburg;
-15091020;Stadt Bad Schmiedeberg;
-15091060;Stadt Coswig (Anhalt);
-15091110;Stadt Gräfenhainichen;
-15091145;Stadt Jessen (Elster);
-15091160;Stadt Kemberg;
-15091230;Gemeinde Mühlanger;
-15091241;Stadt Oranienbaum-Wörlitz;
-15091375;Lutherstadt Wittenberg;
-15091391;Stadt Zahna-Elster;
+;Gemeindeschluessel;Name;Landkreis;BTW;LTW;Flaeche;Einwohner;Stand
+15001000;Stadt Dessau-Roßlau;;70;26, 27;24474;84606;27.08.2013
+15002000;Stadt Halle (Saale);;72;36, 37, 38, 39;13501;231440;27.08.2013
+15003000;Landeshauptstadt Magdeburg;;69;10, 11, 12, 13;20100;229924;27.08.2013
+15081026;Gemeinde Flecken Apenburg-Winterfeld;Altmarkkreis Salzwedel;66;02;5931;1742;27.08.2013
+15081030;Stadt Arendsee (Altmark);Altmarkkreis Salzwedel;66;01;26968;7176;27.08.2013
+15081045;Gemeinde Beetzendorf;Altmarkkreis Salzwedel;66;02;9797;3281;27.08.2013
+15081095;Gemeinde Dähre;Altmarkkreis Salzwedel;66;02;7872;1521;27.08.2013
+15081105;Gemeinde Flecken Diesdorf;Altmarkkreis Salzwedel;66;02;10052;2390;27.08.2013
+15081135;Hansestadt Gardelegen;Altmarkkreis Salzwedel;66;02;63243;23237;27.08.2013
+15081225;Gemeinde Jübar;Altmarkkreis Salzwedel;66;02;7089;1712;27.08.2013
+15081240;Stadt Kalbe (Milde);Altmarkkreis Salzwedel;66;01;27270;7940;27.08.2013
+15081280;Stadt Klötze;Altmarkkreis Salzwedel;66;02;27829;10359;27.08.2013
+15081290;Gemeinde Kuhfelde;Altmarkkreis Salzwedel;66;01;4559;1129;27.08.2013
+15081440;Gemeinde Rohrberg;Altmarkkreis Salzwedel;66;02;3828;1112;27.08.2013
+15081455;Hansestadt Salzwedel;Altmarkkreis Salzwedel;66;01;30457;24381;27.08.2013
+15081545;Gemeinde Wallstawe;Altmarkkreis Salzwedel;66;02;4409;898;27.08.2013
+15082005;Stadt Aken (Elbe);Landkreis Anhalt-Bitterfeld;71;23;5991;8044;27.08.2013
+15082015;Stadt Bitterfeld-Wolfen;Landkreis Anhalt-Bitterfeld;71;28, 29;8744;41816;27.08.2013
+15082180;Stadt Köthen (Anhalt);Landkreis Anhalt-Bitterfeld;71;22;7843;27079;27.08.2013
+15082241;Gemeinde Muldestausee;Landkreis Anhalt-Bitterfeld;71;29;13702;11966;27.08.2013
+15082256;Gemeinde Osternienburger Land;Landkreis Anhalt-Bitterfeld;71;23;13873;9115;27.08.2013
+15082301;Stadt Raguhn-Jeßnitz;Landkreis Anhalt-Bitterfeld;71;29;9712;9581;27.08.2013
+15082340;Stadt Sandersdorf-Brehna;Landkreis Anhalt-Bitterfeld;71;28, 29;8178;14760;27.08.2013
+15082377;Stadt Südliches Anhalt;Landkreis Anhalt-Bitterfeld;71;22;19154;14300;27.08.2013
+15082430;Stadt Zerbst/Anhalt;Landkreis Anhalt-Bitterfeld;71;23;46776;22242;27.08.2013
+15082440;Stadt Zörbig;Landkreis Anhalt-Bitterfeld;71;28;11368;9572;27.08.2013
+15083020;Gemeinde Altenhausen;Landkreis Börde;67;07;4317;1133;27.08.2013
+15083025;Gemeinde Am Großen Bruch;Landkreis Börde;67;09;5011;2269;27.08.2013
+15083030;Gemeinde Angern;Landkreis Börde;67;08;6421;2047;27.08.2013
+15083035;Gemeinde Ausleben;Landkreis Börde;67;09;3329;1719;27.08.2013
+15083040;Gemeinde Barleben;Landkreis Börde;67;08;2974;9034;27.08.2013
+15083060;Gemeinde Beendorf;Landkreis Börde;67;07;683;898;27.08.2013
+15083115;Gemeinde Bülstringen;Landkreis Börde;67;07;2539;898;27.08.2013
+15083120;Gemeinde Burgstall;Landkreis Börde;67;08;11645;1589;27.08.2013
+15083125;Gemeinde Calvörde;Landkreis Börde;67;07;12207;3546;27.08.2013
+15083130;Gemeinde Colbitz;Landkreis Börde;67;08;7186;3210;27.08.2013
+15083190;Gemeinde Eilsleben;Landkreis Börde;67;09;5560;3822;27.08.2013
+15083205;Gemeinde Erxleben;Landkreis Börde;67;07;8338;2969;27.08.2013
+15083230;Gemeinde Flechtingen;Landkreis Börde;67;07;7352;2812;27.08.2013
+15083245;Stadt Gröningen;Landkreis Börde;67;09;5968;3670;27.08.2013
+15083270;Stadt Haldensleben;Landkreis Börde;67;07;13771;18361;27.08.2013
+15083275;Gemeinde Harbke;Landkreis Börde;67;09;1892;1745;27.08.2013
+15083298;Gemeinde Hohe Börde;Landkreis Börde;67;07, 08;17174;18032;27.08.2013
+15083320;Gemeinde Hötensleben;Landkreis Börde;67;09;6079;3751;27.08.2013
+15083323;Gemeinde Ingersleben;Landkreis Börde;67;07;3128;1459;27.08.2013
+15083355;Stadt Kroppenstedt;Landkreis Börde;67;09;3865;1511;27.08.2013
+15083361;Gemeinde Loitsche-Heinrichsberg;Landkreis Börde;67;08;3077;995;27.08.2013
+15083390;Gemeinde Niedere Börde;Landkreis Börde;67;08;7776;7214;27.08.2013
+15083411;Stadt Oebisfelde-Weferlingen;Landkreis Börde;67;07;24930;13714;27.08.2013
+15083415;Stadt Oschersleben (Bode);Landkreis Börde;67;09;18891;20079;27.08.2013
+15083440;Gemeinde Rogätz;Landkreis Börde;67;08;2386;2150;27.08.2013
+15083485;Gemeinde Sommersdorf;Landkreis Börde;67;09;2932;1434;27.08.2013
+15083490;Gemeinde Sülzetal;Landkreis Börde;67;20;10371;9127;27.08.2013
+15083495;Gemeinde Süplingen;Landkreis Börde;67;07;1844;925;27.08.2013
+15083505;Gemeinde Ummendorf;Landkreis Börde;67;09;1568;1009;27.08.2013
+15083515;Gemeinde Völpke;Landkreis Börde;67;09;1722;1395;27.08.2013
+15083531;Stadt Wanzleben-Börde;Landkreis Börde;67;20;18807;14561;27.08.2013
+15083535;Gemeinde Wefensleben;Landkreis Börde;67;09;1263;1853;27.08.2013
+15083557;Gemeinde Westheide;Landkreis Börde;67;08;5084;1714;27.08.2013
+15083565;Stadt Wolmirstedt;Landkreis Börde;67;08;5429;11509;27.08.2013
+15083580;Gemeinde Zielitz;Landkreis Börde;67;08;1140;1847;27.08.2013
+15084012;Gemeinde An der Poststraße;Burgenlandkreis;73;42;4445;1717;27.08.2013
+15084013;Gemeinde Meineweh;Burgenlandkreis;73;44;2525;1077;27.08.2013
+15084015;Stadt Bad Bibra;Burgenlandkreis;73;42;4977;2875;27.08.2013
+15084025;Gemeinde Balgstädt;Burgenlandkreis;73;42;3258;1163;27.08.2013
+15084115;Gemeinde Droyßig;Burgenlandkreis;73;43;2032;2074;27.08.2013
+15084125;Stadt Eckartsberga;Burgenlandkreis;73;42;3596;2412;27.08.2013
+15084130;Gemeinde Elsteraue;Burgenlandkreis;73;43;7994;8688;27.08.2013
+15084132;Gemeinde Finne;Burgenlandkreis;73;42;2504;1259;27.08.2013
+15084133;Gemeinde Finneland;Burgenlandkreis;73;42;2943;1152;27.08.2013
+15084135;Stadt Freyburg (Unstrut);Burgenlandkreis;73;42;4655;4862;27.08.2013
+15084150;Gemeinde Gleina;Burgenlandkreis;73;42;2958;1300;27.08.2013
+15084170;Gemeinde Goseck;Burgenlandkreis;73;42;1457;1021;27.08.2013
+15084207;Gemeinde Gutenborn;Burgenlandkreis;73;43;3394;1882;27.08.2013
+15084235;Stadt Hohenmölsen;Burgenlandkreis;73;45;7531;10089;27.08.2013
+15084246;Gemeinde Kaiserpfalz;Burgenlandkreis;73;42;4108;1638;27.08.2013
+15084250;Gemeinde Karsdorf;Burgenlandkreis;73;42;1984;1721;27.08.2013
+15084275;Gemeinde Kretzschau;Burgenlandkreis;73;43;2776;2663;27.08.2013
+15084282;Gemeinde Lanitz-Hassel-Tal;Burgenlandkreis;73;42;3150;1179;27.08.2013
+15084285;Stadt Laucha an der Unstrut;Burgenlandkreis;73;42;3114;3066;27.08.2013
+15084315;Stadt Lützen;Burgenlandkreis;73;45;9649;8871;27.08.2013
+15084335;Gemeinde Mertendorf;Burgenlandkreis;73;44;3251;1712;27.08.2013
+15084341;Gemeinde Molauer Land;Burgenlandkreis;73;44;3394;1117;27.08.2013
+15084355;Stadt Naumburg (Saale);Burgenlandkreis;73;42, 44;12989;32816;27.08.2013
+15084360;Stadt Nebra (Unstrut);Burgenlandkreis;73;42;2542;3399;27.08.2013
+15084375;Stadt Osterfeld;Burgenlandkreis;73;44;2761;2608;27.08.2013
+15084442;Gemeinde Schnaudertal;Burgenlandkreis;73;43;2073;974;27.08.2013
+15084445;Gemeinde Schönburg;Burgenlandkreis;73;44;1460;1067;27.08.2013
+15084470;Stadt Stößen;Burgenlandkreis;73;44;729;922;09.09.2013
+15084490;Stadt Teuchern;Burgenlandkreis;73;44;8136;8573;27.08.2013
+15084550;Stadt Weißenfels;Burgenlandkreis;73;45;11355;39717;27.08.2013
+15084560;Gemeinde Wethau;Burgenlandkreis;73;44;767;985;27.08.2013
+15084565;Gemeinde Wetterzeube;Burgenlandkreis;73;43;4145;1843;27.08.2013
+15084590;Stadt Zeitz;Burgenlandkreis;73;43;8716;29639;27.08.2013
+15085035;Gemeinde Bad Suderode;Landkreis Harz;68;30;821;.;10.09.2013
+15085040;Stadt Ballenstedt;Landkreis Harz;68;30;6522;7693;27.08.2013
+15085055;Stadt Blankenburg (Harz);Landkreis Harz;68;15;14890;20852;27.08.2013
+15085090;Gemeinde Ditfurt;Landkreis Harz;68;30;2372;1623;27.08.2013
+15085110;Stadt Falkenstein/Harz;Landkreis Harz;68;18;10297;5619;27.08.2013
+15085120;Stadt Gernrode;Landkreis Harz;68;30;3407;.;10.09.2013
+15085125;Gemeinde Groß Quenstedt;Landkreis Harz;68;14;1566;955;27.08.2013
+15085135;Stadt Halberstadt;Landkreis Harz;68;14;14298;40526;09.09.2013
+15085140;Gemeinde Harsleben;Landkreis Harz;68;14;2785;2206;27.08.2013
+15085145;Stadt Harzgerode;Landkreis Harz;68;16;16460;8419;27.08.2013
+15085160;Gemeinde Hedersleben;Landkreis Harz;68;30;1647;1442;27.08.2013
+15085185;Gemeinde Huy;Landkreis Harz;68;14;16727;7645;27.08.2013
+15085190;Stadt Ilsenburg (Harz);Landkreis Harz;68;15;6297;9442;27.08.2013
+15085227;Gemeinde Nordharz;Landkreis Harz;68;15;11066;8011;27.08.2013
+15085228;Stadt Oberharz am Brocken;Landkreis Harz;68;16;27151;11333;27.08.2013
+15085230;Stadt Osterwieck;Landkreis Harz;68;15;21288;11538;27.08.2013
+15085235;Stadt Quedlinburg;Landkreis Harz;68;30;7815;27179;10.09.2013
+15085255;Gemeinde Rieder;Landkreis Harz;68;30;2143;.;10.09.2013
+15085285;Stadt Schwanebeck;Landkreis Harz;68;14;3266;2566;27.08.2013
+15085287;Gemeinde Selke-Aue;Landkreis Harz;68;30;3672;1485;27.08.2013
+15085330;Stadt Thale;Landkreis Harz;68;30;13765;18131;27.08.2013
+15085365;Stadt Wegeleben;Landkreis Harz;68;14;5178;2719;27.08.2013
+15085370;Stadt Wernigerode;Landkreis Harz;68;16;17017;33710;27.08.2013
+15086005;Gemeinde Biederitz;Landkreis Jerichower Land;67;06;3933;8522;27.08.2013
+15086015;Stadt Burg;Landkreis Jerichower Land;67;06;16405;22814;27.08.2013
+15086035;Gemeinde Elbe-Parey;Landkreis Jerichower Land;67;05;10865;6937;27.08.2013
+15086040;Stadt Genthin;Landkreis Jerichower Land;67;05;23073;14808;27.08.2013
+15086055;Stadt Gommern;Landkreis Jerichower Land;67;23;15998;10761;27.08.2013
+15086080;Stadt Jerichow;Landkreis Jerichower Land;67;05;26992;7225;27.08.2013
+15086140;Stadt Möckern;Landkreis Jerichower Land;67;06;52387;13247;27.08.2013
+15086145;Gemeinde Möser;Landkreis Jerichower Land;67;06;8024;8053;27.08.2013
+15087010;Gemeinde Ahlsdorf;Landkreis Mansfeld-Südharz;74;33;509;1679;27.08.2013
+15087015;Stadt Allstedt;Landkreis Mansfeld-Südharz;74;41;14981;8193;27.08.2013
+15087031;Stadt Arnstein;Landkreis Mansfeld-Südharz;74;32;12169;7180;27.08.2013
+15087045;Gemeinde Benndorf;Landkreis Mansfeld-Südharz;74;33;577;2140;27.08.2013
+15087055;Gemeinde Berga;Landkreis Mansfeld-Südharz;74;31;2567;1741;27.08.2013
+15087070;Gemeinde Blankenheim;Landkreis Mansfeld-Südharz;74;33;1486;1285;27.08.2013
+15087075;Gemeinde Bornstedt;Landkreis Mansfeld-Südharz;74;33;931;834;27.08.2013
+15087101;Gemeinde Brücken-Hackpfüffel;Landkreis Mansfeld-Südharz;74;31;1665;1049;27.08.2013
+15087125;Gemeinde Edersleben;Landkreis Mansfeld-Südharz;74;31;905;1026;27.08.2013
+15087130;Lutherstadt Eisleben;Landkreis Mansfeld-Südharz;74;33;14386;24384;27.08.2013
+15087165;Stadt Gerbstedt;Landkreis Mansfeld-Südharz;74;32;10231;7785;27.08.2013
+15087205;Gemeinde Helbra;Landkreis Mansfeld-Südharz;74;33;926;4187;27.08.2013
+15087210;Gemeinde Hergisdorf;Landkreis Mansfeld-Südharz;74;33;954;1662;27.08.2013
+15087220;Stadt Hettstedt;Landkreis Mansfeld-Südharz;74;32;3693;14800;27.08.2013
+15087250;Stadt Kelbra (Kyffhäuser);Landkreis Mansfeld-Südharz;74;31;4055;3578;27.08.2013
+15087260;Gemeinde Klostermansfeld;Landkreis Mansfeld-Südharz;74;33;882;2504;27.08.2013
+15087275;Stadt Mansfeld;Landkreis Mansfeld-Südharz;74;32;14379;9411;27.08.2013
+15087370;Stadt Sangerhausen;Landkreis Mansfeld-Südharz;74;31;20763;28189;27.08.2013
+15087386;Gemeinde Seegebiet Mansfelder Land;Landkreis Mansfeld-Südharz;74;33;10793;9368;27.08.2013
+15087412;Gemeinde Südharz;Landkreis Mansfeld-Südharz;74;31;23638;9968;27.08.2013
+15087440;Gemeinde Wallhausen;Landkreis Mansfeld-Südharz;74;31;3534;2526;27.08.2013
+15087470;Gemeinde Wimmelburg;Landkreis Mansfeld-Südharz;74;33;856;1246;27.08.2013
+15088020;Stadt Bad Dürrenberg;Saalekreis;73;35;3615;11844;27.08.2013
+15088025;Goethestadt Bad Lauchstädt;Saalekreis;74;41;8536;9050;27.08.2013
+15088030;Gemeinde Barnstädt;Saalekreis;74;41;1822;1057;27.08.2013
+15088065;Stadt Braunsbedra;Saalekreis;73;40;7430;11513;27.08.2013
+15088100;Gemeinde Farnstädt;Saalekreis;74;41;2712;1573;27.08.2013
+15088150;Gemeinde Kabelsketal;Saalekreis;72;35;5099;8763;27.08.2013
+15088195;Stadt Landsberg;Saalekreis;72;35;12538;15220;27.08.2013
+15088205;Stadt Leuna;Saalekreis;73;40;8771;13981;27.08.2013
+15088216;Stadt Wettin-Löbejün;Saalekreis;74;34;12703;10315;27.08.2013
+15088220;Stadt Merseburg;Saalekreis;74;40;5375;33520;27.08.2013
+15088235;Stadt Mücheln (Geiseltal);Saalekreis;74;41;9859;9172;27.08.2013
+15088250;Gemeinde Nemsdorf-Göhrendorf;Saalekreis;74;41;1711;885;27.08.2013
+15088265;Gemeinde Obhausen;Saalekreis;74;41;3733;2336;27.08.2013
+15088295;Gemeinde Petersberg;Saalekreis;72;34;10269;9945;27.08.2013
+15088305;Stadt Querfurt;Saalekreis;74;41;15526;11357;27.08.2013
+15088319;Gemeinde Salzatal;Saalekreis;74;34;10937;11884;27.08.2013
+15088330;Gemeinde Schkopau;Saalekreis;73;35;9974;11025;27.08.2013
+15088340;Stadt Schraplau;Saalekreis;74;41;706;1179;27.08.2013
+15088355;Gemeinde Steigra;Saalekreis;74;41;2965;1301;27.08.2013
+15088365;Gemeinde Teutschenthal;Saalekreis;74;34;9063;13297;27.08.2013
+15089005;Stadt Alsleben (Saale);Salzlandkreis;71;21;2364;2550;27.08.2013
+15089015;Stadt Aschersleben;Salzlandkreis;68;18;15620;28131;27.08.2013
+15089026;Stadt Barby;Salzlandkreis;69;19;15272;8938;27.08.2013
+15089030;Stadt Bernburg (Saale);Salzlandkreis;71;21;11346;34481;27.08.2013
+15089041;Gemeinde Bördeaue;Salzlandkreis;71;17;2540;1879;27.08.2013
+15089042;Gemeinde Bördeland;Salzlandkreis;69;20;9218;7863;27.08.2013
+15089043;Gemeinde Börde-Hakel;Salzlandkreis;71;17;3864;3225;27.08.2013
+15089045;Gemeinde Borne;Salzlandkreis;71;17;1532;1243;27.08.2013
+15089055;Stadt Calbe (Saale);Salzlandkreis;69;20;5666;9348;27.08.2013
+15089075;Stadt Egeln;Salzlandkreis;71;17;2914;3510;27.08.2013
+15089130;Gemeinde Giersleben;Salzlandkreis;71;21;2014;1082;27.08.2013
+15089165;Stadt Güsten;Salzlandkreis;71;21;3616;4394;27.08.2013
+15089175;Stadt Hecklingen;Salzlandkreis;71;17;9534;7340;27.08.2013
+15089185;Gemeinde Ilberstedt;Salzlandkreis;71;21;1493;1077;27.08.2013
+15089195;Stadt Könnern;Salzlandkreis;71;22;12521;8861;27.08.2013
+15089235;Stadt Nienburg (Saale);Salzlandkreis;71;21;7914;6707;27.08.2013
+15089245;Gemeinde Plötzkau;Salzlandkreis;71;21;2391;1390;27.08.2013
+15089305;Stadt Schönebeck (Elbe);Salzlandkreis;69;19;8583;31870;27.08.2013
+15089307;Stadt Seeland;Salzlandkreis;68;18;7885;8577;27.08.2013
+15089310;Stadt Staßfurt;Salzlandkreis;71;17;14668;27358;27.08.2013
+15089365;Gemeinde Wolmirsleben;Salzlandkreis;71;17;1691;1386;27.08.2013
+15090003;Gemeinde Aland;Landkreis Stendal;66;03;9235;1492;27.08.2013
+15090007;Gemeinde Altmärkische Höhe;Landkreis Stendal;66;03;9890;2011;27.08.2013
+15090008;Gemeinde Altmärkische Wische;Landkreis Stendal;66;03;6710;916;27.08.2013
+15090010;Stadt Arneburg;Landkreis Stendal;66;03;3064;1601;27.08.2013
+15090070;Stadt Bismark (Altmark);Landkreis Stendal;66;04;28944;8753;27.08.2013
+15090135;Gemeinde Eichstedt (Altmark);Landkreis Stendal;66;03;3282;945;27.08.2013
+15090180;Gemeinde Goldbeck;Landkreis Stendal;66;03;2685;1464;27.08.2013
+15090220;Gemeinde Hassel;Landkreis Stendal;66;03;2057;934;12.09.2013
+15090225;Hansestadt Havelberg;Landkreis Stendal;66;03;14912;6764;27.08.2013
+15090245;Gemeinde Hohenberg-Krusemark;Landkreis Stendal;66;03;6345;1260;27.08.2013
+15090270;Gemeinde Iden;Landkreis Stendal;66;03;3737;912;27.08.2013
+15090285;Gemeinde Kamern;Landkreis Stendal;66;03;6784;1259;27.08.2013
+15090310;Gemeinde Klietz;Landkreis Stendal;66;03;6646;1575;27.08.2013
+15090415;Hansestadt Osterburg (Altmark);Landkreis Stendal;66;03;22974;10364;27.08.2013
+15090435;Gemeinde Rochau;Landkreis Stendal;66;03;3901;1098;27.08.2013
+15090445;Stadt Sandau (Elbe);Landkreis Stendal;66;03;1858;930;27.08.2013
+15090485;Gemeinde Schollene;Landkreis Stendal;66;03;6533;1266;27.08.2013
+15090500;Gemeinde Schönhausen (Elbe);Landkreis Stendal;66;03;7408;2258;27.08.2013
+15090520;Hansestadt Seehausen (Altmark);Landkreis Stendal;66;03;10701;5198;27.08.2013
+15090535;Hansestadt Stendal;Landkreis Stendal;66;04;26802;40281;27.08.2013
+15090546;Stadt Tangerhütte;Landkreis Stendal;66;05;29475;11379;27.08.2013
+15090550;Stadt Tangermünde;Landkreis Stendal;66;05;8987;10495;27.08.2013
+15090610;Hansestadt Werben (Elbe);Landkreis Stendal;66;03;5337;1166;27.08.2013
+15090631;Gemeinde Wust-Fischbeck;Landkreis Stendal;66;03;6815;1399;27.08.2013
+15090635;Gemeinde Zehrental;Landkreis Stendal;66;03;7232;946;27.08.2013
+15091010;Stadt Annaburg;Landkreis Wittenberg;70;25;22428;7224;27.08.2013
+15091020;Stadt Bad Schmiedeberg;Landkreis Wittenberg;70;25;16001;8713;27.08.2013
+15091060;Stadt Coswig (Anhalt);Landkreis Wittenberg;70;27;29574;12446;27.08.2013
+15091110;Stadt Gräfenhainichen;Landkreis Wittenberg;70;25;15893;12528;27.08.2013
+15091145;Stadt Jessen (Elster);Landkreis Wittenberg;70;25;35200;14376;27.08.2013
+15091160;Stadt Kemberg;Landkreis Wittenberg;70;25;23514;10333;27.08.2013
+15091230;Gemeinde Mühlanger;Landkreis Wittenberg;70;24;1221;.;10.09.2013
+15091241;Stadt Oranienbaum-Wörlitz;Landkreis Wittenberg;70;27;11516;8592;27.08.2013
+15091375;Lutherstadt Wittenberg;Landkreis Wittenberg;70;24;24034;46930;27.08.2013
+15091391;Stadt Zahna-Elster;Landkreis Wittenberg;70;24;13627;9557;09.09.2013

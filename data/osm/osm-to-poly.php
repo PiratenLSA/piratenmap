@@ -297,7 +297,7 @@ function LLtoUTM($ll) {
 
 $osm = new OSMXML($argv[1]);
 $osm->processRelations();
-#$osm->writeCSV($argv[1].'.csv');
-$osm->writeSVG($argv[1].'.svg');
-$osm->writeKML($argv[1].'.kml');
+$osm->writeCSV($argv[1].'.csv');
+#$osm->writeSVG($argv[1].'.svg');
+#$osm->writeKML($argv[1].'.kml');
 ?>

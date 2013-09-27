@@ -7,6 +7,7 @@ class GemeindenReport extends Report {
 	?>
 			<label for="mode">Modus: </label><select name="mode">
 				<option value="wahlbeteiligung">Wahlbeteiligung</option>
+				<option value="wahlerflach">Wähler pro Fläche</option>
 			</select>
 	<?
 	}
@@ -21,8 +22,21 @@ class GemeindenReport extends Report {
 				$area = CSVHelper::CreateMap($btwdat, 6, function($row, $old) {
 					return $row[8]/$row[7] * 100;
 				});
-			}
-			break;
+				$map->setTitle(array('Wahlbeteiligung', 'nach', 'Gemeinden'));
+				$map->setLegend('%');
+			}; break;
+			case 'wahlerflach': {
+				$btwdat = CSVHelper::Load(DATA_DIR.'btw13/bt13dat3.csv', array('delim' => ';', 'skip_first_rows' => 1));
+				$area = CSVHelper::CombineMaps(
+					CSVHelper::CreateFlatMap($gemeinden, 0, 5),
+					CSVHelper::CreateFlatMap($btwdat, 6, 8),
+					false,
+					function($a, $w) {
+						return $w / $a;
+					});
+				$map->setTitle(array('Wähler', 'pro', 'Fläche'));
+				$map->setLegend('Wähler / ha');
+			}; break;
 		}
 
 		if (!isset($cs)) {
@@ -32,9 +46,6 @@ class GemeindenReport extends Report {
 		}
 
 		$map->applyColor($area, $cs);
-		$map->applyNames($gem_namen);
-		$map->setTitle(array('Wahlbeteiligung', 'nach', 'Gemeinden'));
-		$map->setLegend('Wähler');
 		echo $map->svgContent();
 	}
 }

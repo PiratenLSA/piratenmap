@@ -20,6 +20,12 @@ function loadgifs {
   done
 }
 
+function webcsv {
+  php web-to-csv.php
 
+}
+
+PATH=.:$PATH
 #loadgifs
 #loadweb
+webcsv
