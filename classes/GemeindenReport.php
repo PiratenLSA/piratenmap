@@ -8,6 +8,7 @@ class GemeindenReport extends Report {
 			<label for="mode">Modus: </label><select name="mode">
 				<option value="wahlbeteiligung">Wahlbeteiligung</option>
 				<option value="wahlerflach">Wähler pro Fläche</option>
+				<option value="gemkreis">Test: Gemeinde&lt;&gt;Landkreis</option>
 			</select>
 	<?
 	}
@@ -36,6 +37,20 @@ class GemeindenReport extends Report {
 					});
 				$map->setTitle(array('Wähler', 'pro', 'Fläche'));
 				$map->setLegend('Wähler / ha');
+			}; break;
+			case 'gemkreis': {
+				$kreise = CSVHelper::Load(DATA_DIR.'lsa-landkreise.csv', array('delim' => ';', 'empty_is_comment' => true));
+				$kreis_lookup = CSVHelper::CreateFlatMap($kreise, 1, 1);
+				$area = CSVHelper::CreateMap($gemeinden, 0, function($row, $old) use ($kreis_lookup) {
+					$k = empty($row[1])? $row[0] : $row[1];
+					return $kreis_lookup[$k];
+				});
+				$map->setTitle(array('Gemeinde<>Kreise', '', '(Test)'));
+				$map->setLegend('EW der Kreise');
+				$cs = new ColorScale();
+				$cs->set(  0, 0x0000FF);
+				$cs->set( 50, 0x00ff00);
+				$cs->set(100, 0xFF0000);
 			}; break;
 		}
 

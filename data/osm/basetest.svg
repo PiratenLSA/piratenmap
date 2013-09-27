@@ -11,7 +11,7 @@
 	</rdf:RDF>
 </metadata>
 <defs><style type="text/css"><![CDATA[
-.gemeinde {
+#Gemeinden polygon {
     fill: white;
     stroke: black;
     stroke-width: 0.25;
@@ -22,7 +22,7 @@
 <?php foreach ($polys as $poly) :?>
   <g id="lsa-<?php echo $poly['id'] ?>" title="<?php echo $poly['name'] ?>">
 	<?php foreach ($poly['loops'] as $loop) :?>
-    <polygon class="gemeinde" style="fill:#fefefe" points="<?php echo $loop ?>" />
+    <polygon style="fill:#fefefe" points="<?php echo $loop ?>" />
 	<?php endforeach; ?>
   </g>
 <?php endforeach; ?>
