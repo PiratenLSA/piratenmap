@@ -2,23 +2,20 @@
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
 <Folder>
-		<name>LSA</name>
-		<open>0</open>
+	<name>LSA</name>
+	<open>0</open>
 <?php foreach ($polys as $poly) :?>
-  <Placemark>
-    <name><?php echo $poly['id'] ?></name>
-    <Polygon>
-	  <tessellate>1</tessellate>
-      <outerBoundaryIs>
+	<Placemark id="<?php echo $poly['id'] ?>">
+		<name><?php echo $poly['id'] ?></name>
+		<MultiGeometry>
 		<?php foreach ($poly['loops'] as $loop) :?>
-        <LinearRing>
-          <coordinates><?php echo $loop ?>
-          </coordinates>
-        </LinearRing>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs><LinearRing><coordinates><?php echo $loop ?></coordinates></LinearRing></outerBoundaryIs>
+			</Polygon>
 		<?php endforeach; ?>
-      </outerBoundaryIs>
-    </Polygon>
-  </Placemark>
+		</MultiGeometry>
+	</Placemark>
 <?php endforeach; ?>
 </Folder>
 </Document>

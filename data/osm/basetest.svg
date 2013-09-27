@@ -10,11 +10,40 @@
 		</cc:Work>
 	</rdf:RDF>
 </metadata>
+<defs><style type="text/css"><![CDATA[
+.gemeinde {
+    fill: white;
+    stroke: black;
+    stroke-width: 0.25;
+}
+
+]]></style></defs>
+<g id="Gemeinden" transform="matrix(3.304562,0,0,3.304562,330.81994,19434.034)">
 <?php foreach ($polys as $poly) :?>
-  <g id="<?php echo $poly['id'] ?>">
+  <g id="lsa-<?php echo $poly['id'] ?>">
 	<?php foreach ($poly['loops'] as $loop) :?>
-    <polygon points="<?php echo $loop ?>" />
+    <polygon class="gemeinde" style="fill:#fefefe" points="<?php echo $loop ?>" />
 	<?php endforeach; ?>
   </g>
 <?php endforeach; ?>
+</g>
+
+<g id="caption">
+  <text x="610.10864" y="24.455679" style="font-size:25px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:100%;letter-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold" id="meta-title" xml:space="preserve" sodipodi:linespacing="100%"><tspan x="610.10864" y="24.455679" id="tspan2332" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;letter-spacing:0px;font-family:Sans;-inkscape-font-specification:Sans Bold">Landkreise und</tspan><tspan x="610.10864" y="49.455681" id="tspan2336" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;letter-spacing:0px;font-family:Sans;-inkscape-font-specification:Sans Bold">kreisfreie Städte in </tspan><tspan x="610.10864" y="74.455681" id="tspan2338" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:100%;letter-spacing:0px;font-family:Sans;-inkscape-font-specification:Sans Bold">Sachsen-Anhalt</tspan></text>
+</g>
+
+<g id="legend">
+	<defs id="legend-gradient-def">
+		<linearGradient id="legend-gradient" x1="1371.7143" y1="71.035203" x2="1371.7143" y2="169.01479" gradientTransform="matrix(0.81649658,0,0,1.1695569,-1112.8206,548.43457)" gradientUnits="userSpaceOnUse">
+			<stop offset="0%" style="stop-color:green;stop-opacity:1" id="stop132" />
+			<stop offset="63%" style="stop-color:yellow;stop-opacity:1" id="stop134" />
+			<stop offset="100%" style="stop-color:red;stop-opacity:1" id="stop136" />
+		</linearGradient>
+	</defs>
+	<rect x="7.1793709" y="631.51428" width="80" height="114.5927" id="rect138" style="fill:url(#legend-gradient)" />
+	<text xml:space="preserve" style="font-size:16px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold" x="89.433441" y="643.01428" id="meta-legend-max" sodipodi:linespacing="125%"><tspan sodipodi:role="line" id="tspan3921-0" x="89.433441" y="643.01428" style="font-size:16px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;letter-spacing:0px;font-family:Sans;-inkscape-font-specification:Sans Bold">42</tspan></text>
+	<text xml:space="preserve" style="font-size:16px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold" x="89.331879" y="745.91168" id="meta-legend-min" sodipodi:linespacing="125%"><tspan sodipodi:role="line" id="tspan3921-0-4" x="89.331879" y="745.91168" style="font-size:16px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;letter-spacing:0px;font-family:Sans;-inkscape-font-specification:Sans Bold">23</tspan></text>
+	<text xml:space="preserve" style="font-size:16px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold" x="6.7809334" y="766.99902" id="meta-legend-title" sodipodi:linespacing="125%"><tspan sodipodi:role="line" id="tspan3921-0-4-8" x="6.7809334" y="766.99902" style="font-size:16px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;letter-spacing:0px;font-family:Sans;-inkscape-font-specification:Sans Bold">Zahlen</tspan></text>
+</g>
+
 </svg>
