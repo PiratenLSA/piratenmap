@@ -1,5 +1,7 @@
 <?php
 
+require_once DATA_DIR.'definitions.php';
+
 abstract class Report {
 #region Class Management
 	private static $classes = array();

@@ -43,22 +43,18 @@ class CSVHelper extends UtilityClass {
 		$result = array();
 		foreach($array as $row) {
 			$k = $row[$key];
-			array_splice($row, $key, 1);
 			$result[$k] = call_user_func($map_function, $row, isset($result[$k])?$result[$k]:null);
 		}
 		return $result;
 	}
 
-	static function CreateFlatMap($array, $key, $value) {
-		if ($key < $value) {
-			$value--;
-		}
+	static function CreateSimpleMap($array, $key, $value) {
 		return self::CreateMap($array, $key, function($row, $old) use ($value) {
 			return $row[$value];
 		});
 	}
 
-	static function CombineMaps($A, $B, $superset, $map_function) {
+	static function Reduce($A, $B, $superset, $map_function) {
 		$result = array();
 		$k1 = array_keys($A);
 		$k2 = array_keys($B);
@@ -73,6 +69,58 @@ class CSVHelper extends UtilityClass {
 			$a = isset($A[$key])?$A[$key]:null;
 			$b = isset($B[$key])?$B[$key]:null;
 			$result[$key] = call_user_func($map_function, $a, $b);
+		}
+		return $result;
+	}
+
+	static function Substitute($origin, $substitutions) {
+		if (count($substitutions)<1) {
+			return $origin;
+		}
+		$dat = $origin;
+		for ($i=0; $i<count($substitutions); $i++) {
+			$op = $substitutions[$i];
+			$result = array();
+			foreach($dat as $k=>$v) {
+				if (is_callable($op)) {
+					$result[$k] = call_user_func($op, $v);
+				} else {
+					$result[$k] = $op[$v];
+				}
+			}
+			$dat = $result;
+		}
+		return $dat;
+	}
+
+	static function Pivot($data) {
+		$result = array();
+		foreach($data as $k => $v) {
+			if (isset($result[$v])) {
+				$result[$v][] = $k;
+			} else {
+				$result[$v] = array($k);
+			}
+		}
+		return $result;
+	}
+
+	static function PivotReduce($pivotmap, $refdata, $map_function) {
+		$result = array();
+		foreach ($pivotmap as $k => $v){
+			$agg = null;
+			if (is_array($v)) {
+				// data format: a => array(1,2,3), ...
+				foreach ($v as $ve){
+					$d = empty($refdata)? $ve : $refdata[$ve];
+					$agg = call_user_func($map_function, $agg, $d);
+				}
+			} else {
+				// data format: a => 1, ...
+				$d = empty($refdata)? $v : $refdata[$v];
+				$agg = call_user_func($map_function, $agg, $d);
+			}
+			$result[$k] = $agg;
 		}
 		return $result;
 	}

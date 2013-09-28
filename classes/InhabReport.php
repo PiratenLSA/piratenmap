@@ -10,9 +10,9 @@ class InhabReport extends Report {
 		CSVHelper::MakeNumeric($kreisdaten,array(2,3));
 
 		$map = new BundeslandMap(DATA_DIR.'LSA_basemap.svg', 'lsa');
-		$count = CSVHelper::CreateFlatMap($kreisdaten, 0, 2);
-		$area = CSVHelper::CreateMap($kreisdaten, 0, function($row, $old) {
-			return $row[1] / $row[2];
+		$count = CSVHelper::CreateSimpleMap($kreisdaten, KREIS_KFZ, KREIS_EW);
+		$area = CSVHelper::CreateMap($kreisdaten, KREIS_KFZ, function($row, $old) {
+			return $row[KREIS_EW] / $row[KREIS_FLAECHE];
 		});
 
 		$cs = new ColorScale();

@@ -37,9 +37,9 @@ class MembersCompareReport extends Report {
 		}
 
 		$map = new BundeslandMap(DATA_DIR.'LSA_basemap.svg', 'lsa');
-		$count = CSVHelper::CombineMaps(
-			$current_memb = CSVHelper::CreateFlatMap($mitgl, 0, 1),
-			CSVHelper::CreateFlatMap($mitgla, 0, 1),
+		$count = CSVHelper::Reduce(
+			$current_memb = CSVHelper::CreateSimpleMap($mitgl, 0, 1),
+			CSVHelper::CreateSimpleMap($mitgla, 0, 1),
 			true, function($a,$b) use ($compare_date) {
 				if ($compare_date) {
 					if ($a == $b) {
@@ -52,8 +52,8 @@ class MembersCompareReport extends Report {
 				}
 			}
 		);
-		$area = CSVHelper::CombineMaps(
-			CSVHelper::CreateFlatMap($kreisdaten, 0, 2),
+		$area = CSVHelper::Reduce(
+			CSVHelper::CreateSimpleMap($kreisdaten, 0, 2),
 			$current_memb,
 			false, function($a,$b) {
 				return $b / ($a/10000);
