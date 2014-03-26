@@ -20,7 +20,7 @@
 ]]></style></defs>
 <g id="Gemeinden" transform="matrix(3.304562,0,0,3.304562,330.81994,19434.034)">
 <?php foreach ($polys as $poly) :?>
-  <g id="lsa-<?php echo $poly['id'] ?>" title="<?php echo $poly['name'] ?>">
+  <g id="de-lsa-<?php echo $poly['id'] ?>" title="<?php echo $poly['name'] ?>">
 	<?php foreach ($poly['loops'] as $loop) :?>
     <polygon style="fill:#fefefe" points="<?php echo $loop ?>" />
 	<?php endforeach; ?>

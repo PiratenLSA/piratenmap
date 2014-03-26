@@ -2,7 +2,7 @@
 
 class GemeindenMap extends SVGMap {
 	function __construct($svgfile, $land) {
-		parent::__construct($svgfile, $land.'-', 'Gemeinden');
+		parent::__construct($svgfile, 'de-'.$land.'-', 'Gemeinden');
 	}
 
 	public function setTitle($lines) {

@@ -55,7 +55,7 @@ class SVGMap {
 				$parts = $area->xpath(".//*[starts-with(@style,'fill:#')]");
 				$col = $scale->get($val, $miv, $mxv);
 				foreach($parts as $a) {
-					$a['style'] = 'fill:#'.sprintf("%06x",$col);
+					$a['style'] = preg_replace('/fill:#[0-9A-F]{6}/i','fill:#'.sprintf("%06x",$col),(string)$a['style']);
 				}
 			}
 		}

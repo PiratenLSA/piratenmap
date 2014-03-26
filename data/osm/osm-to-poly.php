@@ -191,7 +191,7 @@ class OSMXML{
 		// load names from common CSV
 		echo "Loading static info...\n";
 		$gemeinden = CSVHelper::Load(DATA_DIR.'lsa-gemeinden.csv', array('delim' => ';', 'empty_is_comment' => true));
-		$this->gemeindenamen = CSVHelper::CreateFlatMap($gemeinden, 0, 1);
+		$this->gemeindenamen = CSVHelper::CreateSimpleMap($gemeinden, 0, 1);
 	}
 
 	public function formatPointsList($ge, $setdelim=';', $pointdelim=';')
