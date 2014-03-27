@@ -8,15 +8,15 @@ class BundMembersReport extends Report {
 
 	function produceSVG($params) {
 		$map = new BundesMap(DATA_DIR.'base-de.svg');
+		$data = CSVHelper::Load(DATA_DIR.'bund-mitglieder.csv', array('delim' => ';', 'empty_is_comment' => true));
+		CSVHelper::MakeNumeric($data, BM_ANZAHL);
+		$landdaten = CSVHelper::Load(DATA_DIR.'bund-bundeslaender.csv', array('delim' => ';', 'empty_is_comment' => true));
+		CSVHelper::MakeNumeric($landdaten, array(BL_FLAECHE,BL_EW));
+		
 		$area = CSVHelper::CreateSimpleMap(
-			array_map(
-				function($e) {
-					return array($e, rand(0,100));
-				},
-				explode(',','TH,SH,ST,SN,SA,RP,NW,NI,MV,HE,HH,BR,BB,BE,BY,BW')
-			),
-			0,
-			1
+			$landdaten,
+			BL_KURZ,
+			BL_EW
 		);
 
 		$cs = new ColorScale();

@@ -29,5 +29,15 @@ define('KREIS_FLAECHE', 3);
 define('MITGL_KFZ', 0);
 define('MITGL_ANZAHL', 1);
 
+// Spalten in bund-bundeslaender.csv
+define('BL_KURZ', 0);
+define('BL_NAME', 1);
+define('BL_FLAECHE', 2);
+define('BL_EW', 3);
+
+// Spalten in bund-mitglieder.csv
+define('BM_KURZ', 0);
+define('BM_ANZAHL', 1);
+
 
 ?>
