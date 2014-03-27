@@ -7,7 +7,7 @@ class BundMembersReport extends Report {
 	}
 
 	function produceSVG($params) {
-		$map = new BundesMap(DATA_DIR.'base_DE.svg');
+		$map = new BundesMap(DATA_DIR.'base-de.svg');
 		$area = CSVHelper::CreateSimpleMap(
 			array_map(
 				function($e) {
@@ -18,7 +18,7 @@ class BundMembersReport extends Report {
 			0,
 			1
 		);
-		
+
 		$cs = new ColorScale();
 		$cs->set(  0, 0xFFFFFF);
 		$cs->set(100, 0xFF8800);

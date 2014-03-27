@@ -36,7 +36,7 @@ class MembersCompareReport extends Report {
 			$compare_date = false;
 		}
 
-		$map = new BundeslandMap(DATA_DIR.'LSA_basemap.svg', 'lsa');
+		$map = new BundeslandMap(DATA_DIR.'base-de-lsa.svg', 'lsa');
 		$count = CSVHelper::Reduce(
 			$current_memb = CSVHelper::CreateSimpleMap($mitgl, 0, 1),
 			CSVHelper::CreateSimpleMap($mitgla, 0, 1),

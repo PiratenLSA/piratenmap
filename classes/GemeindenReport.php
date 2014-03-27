@@ -25,7 +25,7 @@ class GemeindenReport extends Report {
 		$cs = null;
 		$names = null;
 
-		$map = new GemeindenMap(DATA_DIR.'osm/lsa-gemeinden.osm.svg', 'lsa');
+		$map = new GemeindenMap(DATA_DIR.'base-de-lsa-gemeinden.svg', 'lsa');
 		$gemeinden = CSVHelper::Load(DATA_DIR.'lsa-gemeinden.csv', array('delim' => ';', 'empty_is_comment' => true));
 		$gem_namen = CSVHelper::CreateSimpleMap($gemeinden, GEM_GS, GEM_NAME);
 		switch($params['mode']) {
