@@ -1,7 +1,7 @@
 <?php
 
 class MembersCompareReport extends Report {
-	static function DisplayName() { return "Mitgliederzahl"; }
+	static function DisplayName() { return "LSA: Mitgliederzahl"; }
 
 	function getConfigHTML() {
 		$dir = CSVHelper::KeySort(DirInfo::ScanFiltered(DATA_DIR, '#^mitglieder-(.*?)\.csv$#i'), false);

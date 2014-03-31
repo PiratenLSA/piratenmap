@@ -1,7 +1,7 @@
 <?php
 
 class GemeindenReport extends Report {
-	static function DisplayName() { return "Auflösung auf Gemeinden"; }
+	static function DisplayName() { return "LSA: BTW13: Auflösung auf Gemeinden"; }
 
 	function getConfigHTML() {
 	?>

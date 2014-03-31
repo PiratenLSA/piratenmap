@@ -1,7 +1,7 @@
 <?php
 
 class InhabReport extends Report {
-	static function DisplayName() { return "Einwohnher pro Fläche"; }
+	static function DisplayName() { return "LSA: Einwohnher pro Fläche"; }
 
 	function getConfigHTML() { }
 
