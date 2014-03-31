@@ -20,7 +20,9 @@ $reports = Report::GetClassNames();
 					<input value="Los --&gt;" type="submit">
 				</form>
 			</td>
-			<td valign="top" align="right">Ein Projekt von <a href="https://twitter.com/martok_sh">@martok_sh</a>. (<a href="mailto:webmaster@martoks-place.de">Mail</a>)</td>
+			<td valign="top" align="right">
+				<a href="https://github.com/PiratenLSA/piratenmap/blob/master/README.md">README</a>.
+				Ein Projekt von <a href="https://twitter.com/martok_sh">@martok_sh</a>. (<a href="mailto:webmaster@martoks-place.de">Mail</a>)</td>
 		</tr>
 		<tr>
 			<td style="width: 300px;"><iframe src="about:blank" style="width: 100%; height: 100%;" name="configure"></iframe></td>
