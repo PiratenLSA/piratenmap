@@ -21,10 +21,9 @@ class ColorScale {
 		ksort($this->table, SORT_NUMERIC);
 	}
 
-	public function get($value, $min, $max) {
-		$p = self::clamp(($value-$min)/($max-$min));
-		$p = (int)($p * 100);
-		// find smalles key that is just above value
+	public function getNormalized($value) {
+		$p = (int)(self::clamp($value) * 100);
+		// find smallest key that is just above value
 		$ke = array_keys($this->table);
 		$lower = null;
 		$higher = null;
@@ -57,6 +56,14 @@ class ColorScale {
 		}
 		// whoops, we have 0 points
 		return self::bgr(0,0,0);
+	}
+
+	public function get($value, $min, $max) {
+		return $this->getNormalized(($value-$min)/($max-$min));
+	}
+
+	public function getSqrt($value, $min, $max) {
+		return $this->getPercent(sqrt($value-$min)/(sqrt($max)-sqrt($min)));
 	}
 
 	public function toXML($linearGradient) {

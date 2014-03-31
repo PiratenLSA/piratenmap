@@ -38,6 +38,8 @@ define('BL_EW', 3);
 // Spalten in bund-mitglieder.csv
 define('BM_KURZ', 0);
 define('BM_ANZAHL', 1);
+define('BM_STIMMBER', 2);
+define('BM_OFFEN', 3);
 
 
 ?>
