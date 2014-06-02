@@ -39,6 +39,17 @@ class CSVHelper extends UtilityClass {
 		return $array;
 	}
 
+	static function MatchRegex(&$array, $index, $regex) {
+		foreach($array as &$row) {
+			$old = $row[$index];
+			if (preg_match($regex, $old, $match)) {
+				array_shift($match);
+				array_splice($row, $index, 1, $match);
+			}
+		}
+		return $array;
+	}
+
 	static function CreateMap($array, $key, $map_function) {
 		$result = array();
 		foreach($array as $row) {
@@ -132,6 +143,57 @@ class CSVHelper extends UtilityClass {
 			krsort($array);
 		}
 		return $array;
+	}
+
+	static function KeyValToTable($array, $primary, $fieldname, $fieldvalue) {
+		// map over raw grid data
+		$dat = self::CreateMap($array, $primary, function($row, $old) use ($fieldname, $fieldvalue) {
+			$arr = is_null($old)?array():$old;
+			if (is_array($fieldvalue)) {
+				$v = array();
+				foreach ($fieldvalue as $fv){
+					$v[] = $row[$fv];
+				}
+			} else {
+				$v = $row[$fieldvalue];
+			}
+			$arr[$row[$fieldname]] = $v;
+			return $arr;
+		});
+
+		// collect field names
+		$fields = array();
+		$displayfields = array('_PK');
+		foreach ($dat as $row){
+			foreach ($row as $k => $v){
+				if (!in_array($k, $fields)) {
+					$fields[] = $k;
+					$displayfields[] = $k;
+					// more than one element for this field
+					if (is_array($v)) {
+						for ($i=1; $i<count($v); $i++) {
+							$displayfields[] = '';
+						}
+					}
+				}
+			}
+		}
+
+		// construct table from fields and data
+		$ret = array();
+		foreach ($dat as $pk => $data){
+			$new = array($pk);
+			foreach ($fields as $f){
+				$a = $data[$f];
+				if (is_array($a)) {
+					$new = array_merge($new, $a);
+				} else {
+					$new[] = $a;
+				}
+			}
+			$ret[] = $new;
+		}
+		return array($displayfields, $ret);
 	}
 }
 
